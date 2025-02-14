@@ -1,5 +1,5 @@
 "use client";
-import React, { useState, useCallback } from "react";
+import React, { useCallback } from "react";
 import Image from "next/image";
 import styles from "./create_note.module.css";
 import X from "../../../../public/x.png";
@@ -62,7 +62,7 @@ export default function CreateNote(){
         console.error("Error creating note:", err);
       }
     },
-    [createNote, userId, reset, handleDisable, refetchAllNotes]
+    [createNote, userId, reset, handleDisable, refetchAllNotes, refetchTags]
   );
 
    if (!isActive) return null;
