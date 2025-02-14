@@ -7,7 +7,6 @@
   max-height: 100vh;
   padding: 1rem 2rem;
 }
-
 #header_side_bar {
   padding: 1.5rem 0;
   display: flex;
@@ -53,7 +52,6 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem;
-  
 }
 #footer_side a{
   color: #f4f4f4;
@@ -69,7 +67,6 @@
 #contain_tags{
 display: flex;
 flex-direction: column;
-
 align-items: start;
 gap: 1rem;
 }
@@ -112,7 +109,6 @@ justify-content: center;
 padding: 5px 10px;
 cursor: pointer;
 transition: .2s;
-  
 }
 #content_tags a:hover{
   background: #3471ff;
@@ -135,24 +131,26 @@ transition: .2s;
   background: #333;
   color: #f4f4f4;
   font-size: 16px;
-  /* appearance: none;  */
   cursor: pointer; 
   font-weight: 500;
   letter-spacing: .6px;
 }
-
 #filter_notes select option {
   background: #333;
   color: #f4f4f4; 
   padding: 8px 16px; 
   cursor: pointer;
 }
-
 #filter_notes select option:hover {
   background: #444;
 }
-
 #filter_notes select:focus {
   outline: none; 
   box-shadow: 0 0 0 2px #666;
+}
+.some-class {
+    justify-content: flex-start;
+}
+.another-class {
+    justify-content: flex-start;
 }

@@ -1,6 +1,4 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { useSelector } from "react-redux";
-import { RootState } from "../store";
 import { Tag } from "@/app/types/type-tag";
 export const tagApi = createApi({
   reducerPath: "tagApi",

@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback, useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import Image from "next/image";
 import styles from "./create_note.module.css";
 import X from "../../../../public/x.png";
@@ -24,7 +24,7 @@ export default function CreateNote(){
   const dispatch = useDispatch();
   const { refetch: refetchTags } = useGetTagsQuery(null);
   const { refetch: refetchAllNotes } = useGetNotesQuery(userId);
-  const [createNote, { isError, error }] = useCreateNoteMutation();
+  const [createNote] = useCreateNoteMutation();
 
   const isActive = useSelector((state: RootState) => state.noteReducer.actived_modal_create);
 

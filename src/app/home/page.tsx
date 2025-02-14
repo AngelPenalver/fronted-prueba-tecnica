@@ -15,7 +15,7 @@ import { useGetTagsQuery } from "@/redux/services/tagsApi";
 import { setTags } from "@/redux/features/tagSlice";
 import ModalCharge from "../components/ModalCharge/ModalCharge";
 
-export default function Home() {
+const HomePage = () => {
   const router = useRouter();
   const dispatch = useDispatch();
   const userData = useSelector((state: RootState) => state.userReducer.userData);
@@ -23,7 +23,7 @@ export default function Home() {
   const notes = useSelector((state: RootState) => state.noteReducer.notes);
   const [active, setActive] = useState(false);
 
-  const { data: notesData, refetch: refetchNotes } = useGetNotesQuery(userData.userId, {
+  const { data: notesData } = useGetNotesQuery(userData.userId, {
     skip: !userData.userId,
   });
 
@@ -80,3 +80,5 @@ console.log(noteDetailData)
     </div>
   );
 }
+
+export default HomePage;

@@ -1,5 +1,5 @@
 "use client";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import styles from "./detail.module.css";
 import X from "../../../../public/x.png";
 import Edit from "../../../../public/edit.svg";
@@ -17,7 +17,7 @@ import { RootState } from "@/redux/store";
 import { toggleModal, clearId, setNotes } from "@/redux/features/noteSlice";
 import Swal from "sweetalert2";
 
-export default function Detail() {
+const Detail = () => {
   const userId = useSelector(
     (state: RootState) => state.userReducer.userData.userId
   );
@@ -30,7 +30,7 @@ export default function Detail() {
     (state: RootState) => state.noteReducer?.actived_modal_detail
   );
   const id = note?.id ? note.id : ''
-  const [deleteNote, { isLoading: isDeleting }] = useDeleteNoteMutation();
+  const [deleteNote] = useDeleteNoteMutation();
 
   const handleDisable = useCallback(() => {
     dispatch(toggleModal({ modal: "detail", value: false }));
@@ -113,12 +113,12 @@ export default function Detail() {
     }
   }, [deleteNote, note, refetchAllNotes, handleDisable]);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if(allNotes){
 
       dispatch(setNotes(allNotes))
     }
-  },[allNotes])
+  },[allNotes, dispatch])
 
   if (!isActive) return null;
 
@@ -156,3 +156,5 @@ export default function Detail() {
     </div>
   );
 }
+
+export default Detail;
