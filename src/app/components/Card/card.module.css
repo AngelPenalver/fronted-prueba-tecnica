@@ -1,0 +1,65 @@
+.content_card {
+    min-height: 170px;
+    height: fit-content;
+    background: var(--bg_primary_card);
+    border-radius: 6px;
+    padding: 1rem;
+    border: 1.5px rgba(92, 85, 85, 0.142) solid;
+    transition: .2s;
+    cursor: pointer;
+
+}
+.content_card:hover{
+    background: #00000082;
+}
+#text{
+    opacity: 1;
+}
+#text p {
+color: #A6A6A6;
+
+font-family: inter;
+font-size: 12px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+padding: 1rem 0rem;
+  
+}
+#title h2{
+    color: #FFF;
+font-family: inter;
+font-size: 20px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+letter-spacing: 0.6px;
+padding: .5rem;
+border-bottom:  1.5px rgba(92, 85, 85, 0.142) solid;
+}
+#footer_card{
+    display: flex;
+    align-items: stretch;
+    justify-content: end;
+    gap: 1rem;
+    border-top:  1.5px rgba(92, 85, 85, 0.142) solid;
+    padding: 1rem;
+    /* height: 0px; */
+}
+#footer_card  a{
+    border-radius: 40px;
+    border: 1px solid #3471FF;
+    color: #3471FF;
+  font-family:inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: .2s;
+    
+  }

@@ -1,0 +1,17 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'inter';
+}
+html, body{
+  min-height: 100vh;
+  height: 100vh;
+  background-color: var(--bg_primary);
+}
+:root{
+  --bg_primary: #1B1B1B;
+  --bg_primary_side_nav:#272727;
+  --bg_primary_card: #1F1F1F;
+  --bg_blue:#3471FF;
+}

@@ -1,0 +1,83 @@
+.contain_modal_detail{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff89;
+    transition: .3s;
+    position: absolute;
+
+}
+.content_modal_detail{
+    background: #000;
+    width: 80%;
+    height: 85%;
+    color: #f4f4f4;
+    padding: 2rem;
+    border-radius: 4px;
+    position: relative;
+}
+.content_modal_detail h2{
+    padding: 1rem 0rem;
+    border-bottom: 2px rgba(255, 255, 255, 0.112) solid;
+    font-weight: 600;
+    letter-spacing: 1.44px;
+    font-style: normal;
+
+}
+.content_modal_detail p{
+    padding: 1rem 0;
+    font-weight:300;
+    font-size: 15px;
+    
+}
+#closed{
+    width: 100%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    padding: 0 2rem;
+    position: fixed;
+    top: 10px;
+    cursor: pointer;
+}
+.disable{
+    display: none;
+}
+#icons{
+    display: flex;
+    flex-direction: column;
+    right: 50px;
+    position: absolute;
+    bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+#icons div{
+    width:120px;
+    height: 50px;
+    background: var(--bg_blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: .2s;
+    gap: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 1rem;
+}
+
+#icons div:hover{
+    background: #3470f0b1;
+}
+#icons p{
+    font-weight: 500;
+}
